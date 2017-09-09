@@ -7,9 +7,9 @@ import 'qunitjs/qunit/qunit.css';// Import QUnit’s CSS
 const fixtureElement = document.getElementById('qunit-fixture');
 
 QUnit.test('hello test', function(assert) {
-  const message = 'Welcome to your first StealJS and React app!';
+  const message = 'Welcome to your first StealJS and Preact app';
   const rendered = render(<Header title={message} />, fixtureElement);
-  assert.equal(rendered.textContent.trim(), message, 'Correct title');
+  assert.equal(`${rendered.textContent.trim()}!`, message, 'Correct title');
 });
 
 QUnit.start();
